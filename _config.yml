@@ -10,7 +10,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-permalink: /:lang/:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 
 defaults:
   - scope:
