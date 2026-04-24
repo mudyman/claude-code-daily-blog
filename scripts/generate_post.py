@@ -37,9 +37,10 @@ def write_post(content: str, date_str: str, topic: dict, lang: str) -> Path:
     other_slug = topic["slug"]
     lang_switch = f"/{other_lang}/{date_str.replace('-', '/')}/{other_slug.replace('/', '-')}.html"
 
-    # Extract description from first paragraph
+    # Extract description from first paragraph, escape YAML special chars
     desc_match = re.search(r"^(?!#|\s*<!--|\s*!)(.+)$", content, re.MULTILINE)
     description = desc_match.group(1)[:160] if desc_match else title
+    description = description.replace('"', '\\"').replace("'", "\\'")
 
     front_matter = f"""---
 layout: post
