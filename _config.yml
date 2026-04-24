@@ -1,0 +1,48 @@
+title: "Claude Code Daily"
+description: "A daily blog exploring Claude Code features, one topic at a time"
+url: ""
+baseurl: "/claude-code-daily-blog"
+languages: ["en", "zh"]
+default_lang: "en"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /:lang/:year/:month/:day/:title.html
+
+defaults:
+  - scope:
+      path: "_posts/en"
+      type: "posts"
+    values:
+      layout: "post"
+      lang: "en"
+  - scope:
+      path: "_posts/zh"
+      type: "posts"
+    values:
+      layout: "post"
+      lang: "zh"
+
+collections:
+  posts:
+    output: true
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - scripts/
+  - prompts/
+  - state/
+  - requirements.txt
+  - README.md
+  - Gemfile
+  - Gemfile.lock

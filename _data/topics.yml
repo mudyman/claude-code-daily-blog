@@ -1,0 +1,76 @@
+topics:
+  - slug: overview
+    title_en: "Claude Code Overview"
+    title_zh: "Claude Code 概览"
+  - slug: quickstart
+    title_en: "Getting Started with Claude Code"
+    title_zh: "Claude Code 快速入门"
+  - slug: setup
+    title_en: "Advanced Setup"
+    title_zh: "高级安装配置"
+  - slug: features-overview
+    title_en: "Extending Claude Code"
+    title_zh: "扩展 Claude Code"
+  - slug: cli-reference
+    title_en: "CLI Reference Guide"
+    title_zh: "CLI 命令参考"
+  - slug: common-workflows
+    title_en: "Common Workflows"
+    title_zh: "常用工作流"
+  - slug: best-practices
+    title_en: "Best Practices"
+    title_zh: "最佳实践"
+  - slug: how-claude-code-works
+    title_en: "How Claude Code Works"
+    title_zh: "Claude Code 工作原理"
+  - slug: memory
+    title_en: "Memory & CLAUDE.md"
+    title_zh: "记忆与 CLAUDE.md"
+  - slug: settings
+    title_en: "Settings Configuration"
+    title_zh: "设置配置"
+  - slug: permission-modes
+    title_en: "Permission Modes"
+    title_zh: "权限模式"
+  - slug: context-window
+    title_en: "The Context Window"
+    title_zh: "上下文窗口"
+  - slug: sub-agents
+    title_en: "Subagents"
+    title_zh: "子代理"
+  - slug: agent-sdk/overview
+    title_en: "Agent SDK Overview"
+    title_zh: "Agent SDK 概览"
+  - slug: vs-code
+    title_en: "VS Code Integration"
+    title_zh: "VS Code 集成"
+  - slug: jetbrains
+    title_en: "JetBrains Integration"
+    title_zh: "JetBrains 集成"
+  - slug: chrome
+    title_en: "Chrome Integration"
+    title_zh: "Chrome 集成"
+  - slug: slack
+    title_en: "Slack Integration"
+    title_zh: "Slack 集成"
+  - slug: computer-use
+    title_en: "Computer Use"
+    title_zh: "计算机使用"
+  - slug: remote-control
+    title_en: "Remote Control"
+    title_zh: "远程控制"
+  - slug: third-party-integrations
+    title_en: "Third-Party Integrations"
+    title_zh: "第三方集成"
+  - slug: platforms
+    title_en: "Platforms & Integrations"
+    title_zh: "平台与集成"
+  - slug: claude-directory
+    title_en: "The .claude Directory"
+    title_zh: ".claude 目录"
+  - slug: legal-and-compliance
+    title_en: "Legal & Compliance"
+    title_zh: "法律与合规"
+  - slug: changelog
+    title_en: "Changelog"
+    title_zh: "更新日志"

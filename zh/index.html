@@ -1,0 +1,18 @@
+---
+layout: default
+title: "博客 - 中文"
+lang: zh
+---
+
+<h1>博客文章</h1>
+
+<div class="post-list">
+{% assign posts = site.posts | where: "lang", "zh" | sort: date | reverse %}
+{% for post in posts %}
+  <article class="post-card">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <time>{{ post.date | date: "%Y年%m月%d日" }}</time>
+    <p>{{ post.description }}</p>
+  </article>
+{% endfor %}
+</div>

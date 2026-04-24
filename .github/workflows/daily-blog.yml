@@ -1,0 +1,114 @@
+name: Daily Blog Post Generator
+
+on:
+  schedule:
+    - cron: '7 6 * * *'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Override topic slug (optional)'
+        required: false
+        type: string
+      skip_api:
+        description: 'Skip Claude API calls (use raw doc)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+
+    env:
+      ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+      ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
+      CC_BLOG_MODEL: ${{ vars.CC_BLOG_MODEL || 'astron-code-latest' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}
+          restore-keys: playwright-chromium-
+
+      - name: Install Playwright browsers
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Create demo project for screenshots
+        run: |
+          mkdir -p /tmp/demo-project
+          cd /tmp/demo-project
+          git init
+          cat > main.py << 'PYEOF'
+          def greet(name: str) -> str:
+              """Return a greeting message."""
+              return f"Hello, {name}!"
+
+          if __name__ == "__main__":
+              print(greet("Claude Code"))
+          PYEOF
+          cat > README.md << 'MDEOF'
+          # Demo Project
+          A simple Python project for Claude Code demonstrations.
+          MDEOF
+          git add -A
+          git commit -m "Initial commit"
+
+      - name: Generate blog post
+        id: generate
+        run: |
+          EXTRA_ARGS=""
+          if [ "${{ github.event.inputs.skip_api }}" = "true" ]; then
+            EXTRA_ARGS="--skip-api"
+          fi
+          python scripts/generate_post.py --topic "${{ github.event.inputs.topic || '' }}" $EXTRA_ARGS
+
+      - name: Validate Jekyll build
+        run: bundle exec jekyll build
+
+      - name: Commit and push new post
+        run: |
+          git config user.name "Blog Bot"
+          git config user.email "bot@claude-code-daily.blog"
+          git add _posts/ assets/images/screenshots/ state/
+          git diff --staged --quiet || git commit -m "Add blog post for $(date +%Y-%m-%d)"
+          git push
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "::error::Blog generation failed. Check the logs for details."
+          echo "Failed step: ${{ github.action }}"
