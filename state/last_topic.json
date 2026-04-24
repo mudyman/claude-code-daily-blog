@@ -2,13 +2,19 @@
   "last_topic_slug": "overview",
   "last_topic_index": 0,
   "last_published_date": "2026-04-24",
-  "cycle_number": 1,
+  "cycle_number": 2,
   "history": [
     {
       "date": "2026-04-24",
       "topic": "overview",
       "index": 0,
       "cycle": 1
+    },
+    {
+      "date": "2026-04-24",
+      "topic": "overview",
+      "index": 0,
+      "cycle": 2
     }
   ]
 }
