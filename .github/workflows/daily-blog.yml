@@ -65,6 +65,7 @@ jobs:
           mkdir -p /tmp/demo-project
           cd /tmp/demo-project
           git init
+          git config user.name "Demo" && git config user.email "demo@example.com"
           cat > main.py << 'PYEOF'
           def greet(name: str) -> str:
               """Return a greeting message."""
