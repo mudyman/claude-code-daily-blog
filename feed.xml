@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/claude-code-daily-blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/claude-code-daily-blog/" rel="alternate" type="text/html" /><updated>2026-04-24T13:46:11+00:00</updated><id>/claude-code-daily-blog/feed.xml</id><title type="html">Claude Code Daily</title><subtitle>A daily blog exploring Claude Code features, one topic at a time</subtitle><entry xml:lang="en"><title type="html">Claude Code Overview</title><link href="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html" rel="alternate" type="text/html" title="Claude Code Overview" /><published>2026-04-24T00:00:00+00:00</published><updated>2026-04-24T00:00:00+00:00</updated><id>/claude-code-daily-blog/daily-digest/2026/04/24/overview</id><content type="html" xml:base="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html"><![CDATA[<h1 id="claude-code-the-ai-coding-assistant-that-lives-where-you-work">Claude Code: The AI Coding Assistant That Lives Where You Work</h1>
+
+<p>Ever spent an afternoon writing tests for code you wrote three months ago? Or tracing a bug through fifteen files across two services? What if you could just <em>say</em> “write tests for the auth module, run them, and fix any failures” — and watch it happen?</p>
+
+<p>That’s the promise of Claude Code, Anthropic’s agentic coding tool. And today, we’re kicking off a deep-dive series that will take you from zero to power user.</p>
+
+<h2 id="what-is-claude-code">What Is Claude Code?</h2>
+
+<p>Claude Code isn’t just another autocomplete plugin. It’s an <strong>agentic</strong> coding assistant — meaning it doesn’t just suggest the next line, it actually <em>does things</em>. It reads your entire codebase, edits files across multiple directories, runs commands, and integrates with your existing development tools.</p>
+
+<p>Think of it as a deeply capable pair programmer who never gets tired, never forgets the architecture doc, and can spin up three parallel agents to tackle different parts of a refactor simultaneously.</p>
+
+<p>The key insight: Claude Code meets you <em>where you already work</em>. Terminal, VS Code, JetBrains, desktop app, browser — it runs everywhere, and your settings, memories, and configurations follow you across all of them.</p>
+
+<h2 id="key-concepts">Key Concepts</h2>
+
+<p>Before we install anything, let’s understand what makes Claude Code tick:</p>
+
+<ul>
+  <li><strong>Agentic, not just assistive</strong> — Claude Code doesn’t wait for you to copy-paste context. It explores your codebase, makes a plan, executes across files, and verifies the result.</li>
+  <li><strong>Surface-agnostic</strong> — The same engine powers the CLI, IDE extensions, desktop app, and web. Start a task in your terminal, continue on your phone, review diffs on the desktop.</li>
+  <li><strong>Composable</strong> — It follows Unix philosophy. Pipe logs into it, chain it with other tools, run it in CI. It’s a first-class citizen in your toolchain.</li>
+  <li><strong>Extensible</strong> — Through MCP (Model Context Protocol), custom commands, hooks, and the Agent SDK, you can connect it to anything from Jira to Slack to your own internal tooling.</li>
+</ul>
+
+<h2 id="hands-on-walkthrough-getting-claude-code-installed">Hands-on Walkthrough: Getting Claude Code Installed</h2>
+
+<p>Let’s get it running. The primary interface is the CLI, and installation is straightforward.</p>
+
+<h3 id="terminal-cli-installation">Terminal CLI Installation</h3>
+
+<p><strong>macOS, Linux, and WSL:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://claude.ai/install.sh | bash
+</code></pre></div></div>
+
+<p><strong>Windows PowerShell:</strong></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irm</span><span class="w"> </span><span class="nx">https://claude.ai/install.ps1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">iex</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Windows CMD:</strong></p>
+
+<div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">curl</span> <span class="na">-fsSL </span><span class="kd">https</span>://claude.ai/install.cmd <span class="na">-o </span><span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="nb">del</span> <span class="kd">install</span>.cmd
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Windows users, heads up:</strong> If you see <code class="language-plaintext highlighter-rouge">The token '&amp;&amp;' is not a valid statement separator</code>, you’re in PowerShell, not CMD. If you see <code class="language-plaintext highlighter-rouge">'irm' is not recognized</code>, you’re in CMD, not PowerShell. Your prompt shows <code class="language-plaintext highlighter-rouge">PS C:\</code> in PowerShell and just <code class="language-plaintext highlighter-rouge">C:\</code> in CMD. Also, native Windows setups require <a href="https://git-scm.com/downloads/win">Git for Windows</a> — install that first. WSL users don’t need it.</p>
+</blockquote>
+
+<p>Native installations auto-update in the background, so you’ll always be on the latest version.</p>
+
+<h3 id="alternative-install-methods">Alternative Install Methods</h3>
+
+<p>If you prefer package managers:</p>
+
+<p><strong>Homebrew (macOS):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install</span> <span class="nt">--cask</span> claude-code
+</code></pre></div></div>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">claude-code</code> tracks the stable channel (about a week behind), while <code class="language-plaintext highlighter-rouge">claude-code@latest</code> gets new versions immediately. Homebrew installs don’t auto-update, so run <code class="language-plaintext highlighter-rouge">brew upgrade</code> periodically.</p>
+
+<p><strong>WinGet (Windows):</strong></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">winget</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">Anthropic.ClaudeCode</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Same caveat — no auto-updates. Run <code class="language-plaintext highlighter-rouge">winget upgrade Anthropic.ClaudeCode</code> when you want the latest.</p>
+
+<p>You can also install via <strong>apt, dnf, or apk</strong> on Debian, Fedora, RHEL, and Alpine.</p>
+
+<h3 id="your-first-session">Your First Session</h3>
+
+<p>Once installed, navigate to any project and launch:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>your-project
+claude
+</code></pre></div></div>
+
+<p><img src="/assets/images/screenshots/first-session-launch.png" alt="First Session Launch" /></p>
+
+<p>You’ll be prompted to log in on first use. After that, you’re off to the races.</p>
+
+<h3 id="other-surfaces">Other Surfaces</h3>
+
+<p>The CLI is just the beginning. Claude Code is available in:</p>
+
+<ul>
+  <li><strong>VS Code / Cursor</strong> — Search “Claude Code” in Extensions (<code class="language-plaintext highlighter-rouge">Cmd+Shift+X</code>), then open via Command Palette → “Claude Code: Open in New Tab”</li>
+  <li><strong>Desktop App</strong> — Download for <a href="https://claude.ai/api/desktop/darwin/universal/dmg/latest/redirect?utm_source=claude_code&amp;utm_medium=docs">macOS</a> or <a href="https://claude.ai/api/desktop/win32/x64/setup/latest/redirect?utm_source=claude_code&amp;utm_medium=docs">Windows</a>. Visual diff review, multiple sessions, scheduled tasks.</li>
+  <li><strong>Web</strong> — Head to <a href="https://claude.ai/code">claude.ai/code</a> for zero-setup coding in your browser. Great for long-running tasks or repos you don’t have locally.</li>
+  <li><strong>JetBrains</strong> — Install the <a href="https://plugins.jetbrains.com/plugin/27310-claude-code-beta-">Claude Code plugin</a> from the Marketplace.</li>
+</ul>
+
+<p>Most surfaces require a <a href="https://claude.com/pricing?utm_source=claude_code&amp;utm_medium=docs&amp;utm_content=overview_pricing">Claude subscription</a> or <a href="https://console.anthropic.com/">Anthropic Console</a> account. The Terminal CLI and VS Code also support third-party providers.</p>
+
+<h2 id="pro-tips">Pro Tips</h2>
+
+<p><strong>Pipe everything.</strong> Claude Code is a Unix citizen. Some patterns that will change your workflow:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Analyze recent log output</span>
+<span class="nb">tail</span> <span class="nt">-200</span> app.log | claude <span class="nt">-p</span> <span class="s2">"Slack me if you see any anomalies"</span>
+
+<span class="c"># Automate translations in CI</span>
+claude <span class="nt">-p</span> <span class="s2">"translate new strings into French and raise a PR for review"</span>
+
+<span class="c"># Bulk operations across files</span>
+git diff main <span class="nt">--name-only</span> | claude <span class="nt">-p</span> <span class="s2">"review these changed files for security issues"</span>
+</code></pre></div></div>
+
+<p><strong>Use CLAUDE.md for persistent context.</strong> Drop a markdown file in your project root with coding standards, architecture decisions, and preferred libraries. Claude reads it at the start of every session. It also builds <em>auto memory</em> — saving learnings like build commands and debugging insights across sessions without you writing anything.</p>
+
+<p><strong>Git is a first-class citizen.</strong> Don’t just ask Claude to write code — ask it to commit, branch, and open PRs:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude <span class="s2">"commit my changes with a descriptive message"</span>
+</code></pre></div></div>
+
+<p><strong>Go parallel with sub-agents.</strong> Spawn multiple Claude Code agents working on different parts of a task simultaneously, with a lead agent coordinating and merging results.</p>
+
+<p><strong>Schedule the boring stuff.</strong> Morning PR reviews, overnight CI failure analysis, weekly dependency audits — Claude Code can run on a schedule via Routines (Anthropic-managed, runs even when your computer’s off) or Desktop scheduled tasks.</p>
+
+<h2 id="whats-next">What’s Next</h2>
+
+<p>Claude Code is a deep tool, and we’ve barely scratched the surface. In the coming days, we’ll explore each surface, workflow pattern, and advanced feature in detail. But first, we need to get you set up properly.</p>
+
+<p><strong>Coming Tomorrow:</strong> <em>Getting Started with Claude Code</em> — we’ll walk through your first real task end-to-end, from exploring a codebase to committing a fix, including permission modes, configuration, and the workflow patterns that make the biggest difference. See you then.</p>]]></content><author><name></name></author><category term="daily-digest" /><category term="claude-code" /><category term="overview" /><summary type="html"><![CDATA[Ever spent an afternoon writing tests for code you wrote three months ago? Or tracing a bug through fifteen files across two services? What if you could just *s]]></summary></entry><entry xml:lang="zh"><title type="html">Claude Code 概览</title><link href="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html" rel="alternate" type="text/html" title="Claude Code 概览" /><published>2026-04-24T00:00:00+00:00</published><updated>2026-04-24T00:00:00+00:00</updated><id>/claude-code-daily-blog/daily-digest/2026/04/24/overview</id><content type="html" xml:base="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html"><![CDATA[<h1 id="告别复制粘贴claude-code-如何重塑你的全栈开发工作流">告别复制粘贴：Claude Code 如何重塑你的全栈开发工作流</h1>
+
+<p>每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。</p>
+
+<p>今天我们要聊的 <strong>Claude Code</strong>，不是一个简单的代码补全工具，而是一个真正意义上的<strong>代理式编程助手</strong>。它直接驻扎在你的开发环境中，能读懂你的整个代码库，跨文件编辑代码，执行命令行操作，并与你的开发工具链无缝集成。</p>
+
+<h2 id="关键概念无处不在的-ai-结对程序员">关键概念：无处不在的 AI 结对程序员</h2>
+
+<p>Claude Code 最核心的理念是<strong>环境融合</strong>。它不是一个孤立的网页应用，而是渗透到了你开发的每一个角落——终端 CLI、VS Code、JetBrains IDE、桌面应用，甚至是浏览器和手机端。</p>
+
+<p>更重要的是，所有这些入口都连接着同一个底层引擎。这意味着你在项目根目录配置的 <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> 记忆文件、MCP 服务器设置和自定义命令，在各个环境下都是通用的。</p>
+
+<h2 id="实操演示从安装到起飞">实操演示：从安装到起飞</h2>
+
+<p>让我们先从最硬核的终端 CLI 开始。安装过程非常极客，只需一行命令：</p>
+
+<p><strong>macOS, Linux, WSL:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://claude.ai/install.sh | bash
+</code></pre></div></div>
+
+<p><strong>Windows PowerShell:</strong></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irm</span><span class="w"> </span><span class="nx">https://claude.ai/install.ps1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">iex</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Windows CMD:</strong></p>
+
+<div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">curl</span> <span class="na">-fsSL </span><span class="kd">https</span>://claude.ai/install.cmd <span class="na">-o </span><span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="nb">del</span> <span class="kd">install</span>.cmd
+</code></pre></div></div>
+
+<p><img src="/assets/images/screenshots/cli-install-process.png" alt="Cli Install Process" /></p>
+
+<p>如果你是 macOS 用户，也可以通过 Homebrew 安装。它提供了两个 cask：<code class="language-plaintext highlighter-rouge">claude-code</code> 走稳定版通道（通常晚一周发布，跳过有重大退步的版本），而 <code class="language-plaintext highlighter-rouge">claude-code@latest</code> 则追踪最新版本。Windows 用户还可以使用 <code class="language-plaintext highlighter-rouge">winget install Anthropic.ClaudeCode</code>。</p>
+
+<blockquote>
+  <p>💡 <strong>小提示</strong>：原生 Windows 安装需要预先安装 Git for Windows，WSL 环境则不需要。另外，原生安装会在后台自动更新，而 Homebrew 和 WinGet 安装需要手动执行升级命令。</p>
+</blockquote>
+
+<p>安装完成后，进入你的项目目录，启动它：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>your-project
+claude
+</code></pre></div></div>
+
+<p>首次使用会提示登录，之后你就可以直接用自然语言发号施令了。</p>
+
+<p>如果你更偏爱 IDE 体验，可以在 VS Code 或 Cursor 的扩展商店搜索 “Claude Code” 安装；JetBrains 用户则可以在插件市场安装。如果你不想在本地折腾，直接访问 <a href="https://claude.ai/code">claude.ai/code</a> 即可在浏览器中开箱即用。</p>
+
+<h2 id="进阶技巧把-ai-编程玩出花">进阶技巧：把 AI 编程玩出花</h2>
+
+<p>仅仅用来写代码？那太小看 Claude Code 了。以下是几个能真正改变你日常工作流的进阶用法：</p>
+
+<h3 id="1-自动化繁琐任务">1. 自动化繁琐任务</h3>
+<p>测试没覆盖的代码、修复全局 Lint 错误、解决合并冲突……这些枯燥的活儿直接丢给它：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude <span class="s2">"write tests for the auth module, run them, and fix any failures"</span>
+</code></pre></div></div>
+
+<h3 id="2-优雅的-git-操作">2. 优雅的 Git 操作</h3>
+<p>让 AI 帮你暂存更改、编写规范的提交信息，甚至创建分支和 PR：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude <span class="s2">"commit my changes with a descriptive message"</span>
+</code></pre></div></div>
+
+<h3 id="3-unix-哲学的管道组合">3. Unix 哲学的管道组合</h3>
+<p>Claude Code 是可组合的，你可以像搭积木一样把它和其他命令行工具串联：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 分析最近的日志输出</span>
+<span class="nb">tail</span> <span class="nt">-200</span> app.log | claude <span class="nt">-p</span> <span class="s2">"Slack me if you see any anomalies"</span>
+
+<span class="c"># 在 CI 中自动化翻译</span>
+claude <span class="nt">-p</span> <span class="s2">"translate new strings into French and raise a PR for review"</span>
+
+<span class="c"># 跨文件批量操作</span>
+git diff main <span class="nt">--name-only</span> | claude <span class="nt">-p</span> <span class="s2">"review these changed files for security issues"</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/screenshots/cli-pipe-workflow.png" alt="Cli Pipe Workflow" /></p>
+
+<h3 id="4-跨设备无缝衔接">4. 跨设备无缝衔接</h3>
+<p>这是我最喜欢的功能。你可以在终端里开启一个长任务，然后合上电脑，在手机浏览器或 iOS 应用上通过 Remote Control 继续跟进；或者在终端里用 <code class="language-plaintext highlighter-rouge">claude --teleport</code> 把网页端开启的任务拉取到本地。甚至，你可以在 Slack 里直接 @Claude 提交 bug，它会直接给你返回一个 Pull Request！</p>
+
+<h2 id="明日预告">明日预告</h2>
+
+<p>今天我们纵览了 Claude Code 的全貌，看到了它如何作为一个全能的代理式助手融入开发者的各个工作环境。但光看不过瘾，到底怎么在实际项目中用它定位 Bug、编写代码并提交修复？明天，我们将带来 <strong>Claude Code 快速入门</strong>，手把手带你跑通第一个真实的开发任务，敬请期待！</p>]]></content><author><name></name></author><category term="daily-digest" /><category term="claude-code" /><category term="overview" /><summary type="html"><![CDATA[每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。]]></summary></entry></feed>

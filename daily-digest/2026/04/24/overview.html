@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code 概览 | Claude Code Daily</title>
+  <meta name="description" content="每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。">
+  <link rel="stylesheet" href="/claude-code-daily-blog/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="/claude-code-daily-blog/feed.xml" title="Claude Code Daily" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Claude Code 概览 | Claude Code Daily</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Claude Code 概览" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。" />
+<meta property="og:description" content="每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。" />
+<link rel="canonical" href="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html" />
+<meta property="og:url" content="/claude-code-daily-blog/daily-digest/2026/04/24/overview.html" />
+<meta property="og:site_name" content="Claude Code Daily" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-04-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Claude Code 概览" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-04-24T00:00:00+00:00","datePublished":"2026-04-24T00:00:00+00:00","description":"每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。","headline":"Claude Code 概览","mainEntityOfPage":{"@type":"WebPage","@id":"/claude-code-daily-blog/daily-digest/2026/04/24/overview.html"},"url":"/claude-code-daily-blog/daily-digest/2026/04/24/overview.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/claude-code-daily-blog/" class="site-title">Claude Code Daily</a>
+      <nav class="site-nav">
+        <a href="/claude-code-daily-blog/en/">English</a>
+        <a href="/claude-code-daily-blog/zh/">中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Claude Code 概览</h1>
+    <div class="post-meta">
+      <time datetime="2026-04-24T00:00:00+00:00">April 24, 2026</time>
+      
+        <a href="/en/2026/04/24/overview.html" class="lang-switch">English</a>
+      
+    </div>
+    
+    <div class="post-tags">
+      <span class="tag">claude-code</span><span class="tag">overview</span>
+    </div>
+    
+  </header>
+
+  <div class="post-content">
+    <h1 id="告别复制粘贴claude-code-如何重塑你的全栈开发工作流">告别复制粘贴：Claude Code 如何重塑你的全栈开发工作流</h1>
+
+<p>每天，我们有多少时间耗在无尽的复制粘贴中？把报错日志贴进聊天框，把 AI 生成的代码抄回编辑器，再切到终端跑一下测试……这种在浏览器和 IDE 之间反复横跳的日子，该结束了。</p>
+
+<p>今天我们要聊的 <strong>Claude Code</strong>，不是一个简单的代码补全工具，而是一个真正意义上的<strong>代理式编程助手</strong>。它直接驻扎在你的开发环境中，能读懂你的整个代码库，跨文件编辑代码，执行命令行操作，并与你的开发工具链无缝集成。</p>
+
+<h2 id="关键概念无处不在的-ai-结对程序员">关键概念：无处不在的 AI 结对程序员</h2>
+
+<p>Claude Code 最核心的理念是<strong>环境融合</strong>。它不是一个孤立的网页应用，而是渗透到了你开发的每一个角落——终端 CLI、VS Code、JetBrains IDE、桌面应用，甚至是浏览器和手机端。</p>
+
+<p>更重要的是，所有这些入口都连接着同一个底层引擎。这意味着你在项目根目录配置的 <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> 记忆文件、MCP 服务器设置和自定义命令，在各个环境下都是通用的。</p>
+
+<h2 id="实操演示从安装到起飞">实操演示：从安装到起飞</h2>
+
+<p>让我们先从最硬核的终端 CLI 开始。安装过程非常极客，只需一行命令：</p>
+
+<p><strong>macOS, Linux, WSL:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://claude.ai/install.sh | bash
+</code></pre></div></div>
+
+<p><strong>Windows PowerShell:</strong></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irm</span><span class="w"> </span><span class="nx">https://claude.ai/install.ps1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">iex</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Windows CMD:</strong></p>
+
+<div class="language-batch highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">curl</span> <span class="na">-fsSL </span><span class="kd">https</span>://claude.ai/install.cmd <span class="na">-o </span><span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="kd">install</span>.cmd <span class="o">&amp;&amp;</span> <span class="nb">del</span> <span class="kd">install</span>.cmd
+</code></pre></div></div>
+
+<p><img src="/assets/images/screenshots/cli-install-process.png" alt="Cli Install Process" /></p>
+
+<p>如果你是 macOS 用户，也可以通过 Homebrew 安装。它提供了两个 cask：<code class="language-plaintext highlighter-rouge">claude-code</code> 走稳定版通道（通常晚一周发布，跳过有重大退步的版本），而 <code class="language-plaintext highlighter-rouge">claude-code@latest</code> 则追踪最新版本。Windows 用户还可以使用 <code class="language-plaintext highlighter-rouge">winget install Anthropic.ClaudeCode</code>。</p>
+
+<blockquote>
+  <p>💡 <strong>小提示</strong>：原生 Windows 安装需要预先安装 Git for Windows，WSL 环境则不需要。另外，原生安装会在后台自动更新，而 Homebrew 和 WinGet 安装需要手动执行升级命令。</p>
+</blockquote>
+
+<p>安装完成后，进入你的项目目录，启动它：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>your-project
+claude
+</code></pre></div></div>
+
+<p>首次使用会提示登录，之后你就可以直接用自然语言发号施令了。</p>
+
+<p>如果你更偏爱 IDE 体验，可以在 VS Code 或 Cursor 的扩展商店搜索 “Claude Code” 安装；JetBrains 用户则可以在插件市场安装。如果你不想在本地折腾，直接访问 <a href="https://claude.ai/code">claude.ai/code</a> 即可在浏览器中开箱即用。</p>
+
+<h2 id="进阶技巧把-ai-编程玩出花">进阶技巧：把 AI 编程玩出花</h2>
+
+<p>仅仅用来写代码？那太小看 Claude Code 了。以下是几个能真正改变你日常工作流的进阶用法：</p>
+
+<h3 id="1-自动化繁琐任务">1. 自动化繁琐任务</h3>
+<p>测试没覆盖的代码、修复全局 Lint 错误、解决合并冲突……这些枯燥的活儿直接丢给它：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude <span class="s2">"write tests for the auth module, run them, and fix any failures"</span>
+</code></pre></div></div>
+
+<h3 id="2-优雅的-git-操作">2. 优雅的 Git 操作</h3>
+<p>让 AI 帮你暂存更改、编写规范的提交信息，甚至创建分支和 PR：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>claude <span class="s2">"commit my changes with a descriptive message"</span>
+</code></pre></div></div>
+
+<h3 id="3-unix-哲学的管道组合">3. Unix 哲学的管道组合</h3>
+<p>Claude Code 是可组合的，你可以像搭积木一样把它和其他命令行工具串联：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 分析最近的日志输出</span>
+<span class="nb">tail</span> <span class="nt">-200</span> app.log | claude <span class="nt">-p</span> <span class="s2">"Slack me if you see any anomalies"</span>
+
+<span class="c"># 在 CI 中自动化翻译</span>
+claude <span class="nt">-p</span> <span class="s2">"translate new strings into French and raise a PR for review"</span>
+
+<span class="c"># 跨文件批量操作</span>
+git diff main <span class="nt">--name-only</span> | claude <span class="nt">-p</span> <span class="s2">"review these changed files for security issues"</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/screenshots/cli-pipe-workflow.png" alt="Cli Pipe Workflow" /></p>
+
+<h3 id="4-跨设备无缝衔接">4. 跨设备无缝衔接</h3>
+<p>这是我最喜欢的功能。你可以在终端里开启一个长任务，然后合上电脑，在手机浏览器或 iOS 应用上通过 Remote Control 继续跟进；或者在终端里用 <code class="language-plaintext highlighter-rouge">claude --teleport</code> 把网页端开启的任务拉取到本地。甚至，你可以在 Slack 里直接 @Claude 提交 bug，它会直接给你返回一个 Pull Request！</p>
+
+<h2 id="明日预告">明日预告</h2>
+
+<p>今天我们纵览了 Claude Code 的全貌，看到了它如何作为一个全能的代理式助手融入开发者的各个工作环境。但光看不过瘾，到底怎么在实际项目中用它定位 Bug、编写代码并提交修复？明天，我们将带来 <strong>Claude Code 快速入门</strong>，手把手带你跑通第一个真实的开发任务，敬请期待！</p>
+
+  </div>
+
+  <nav class="post-nav">
+    
+    <a href="/daily-digest/2026/04/24/overview.html" class="prev">&larr; Claude Code Overview</a>
+    
+    
+  </nav>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Claude Code Daily. Powered by Claude Code.</p>
+    </div>
+  </footer>
+</body>
+</html>
