@@ -1,9 +1,8 @@
-title: "Claude Code Daily"
-description: "A daily blog exploring Claude Code features, one topic at a time"
+title: "Claude Code 每日博客"
+description: "每天一篇，深入解读 Claude Code 的功能与用法"
 url: ""
 baseurl: "/claude-code-daily-blog"
-languages: ["en", "zh"]
-default_lang: "en"
+lang: zh-CN
 
 markdown: kramdown
 kramdown:
@@ -14,13 +13,7 @@ permalink: /:categories/:year/:month/:day/:title.html
 
 defaults:
   - scope:
-      path: "_posts/en"
-      type: "posts"
-    values:
-      layout: "post"
-      lang: "en"
-  - scope:
-      path: "_posts/zh"
+      path: "_posts"
       type: "posts"
     values:
       layout: "post"

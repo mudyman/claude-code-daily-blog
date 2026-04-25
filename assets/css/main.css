@@ -54,6 +54,15 @@ body {
 
 .site-nav a:hover { color: var(--accent); }
 
+.translate-widget {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.translate-widget iframe {
+  border-radius: 4px;
+}
+
 /* Hero */
 .hero {
   text-align: center;

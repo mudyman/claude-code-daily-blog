@@ -92,6 +92,6 @@ class StateManager:
 if __name__ == "__main__":
     sm = StateManager()
     next_topic = sm.get_next_topic()
-    print(f"Next topic: {next_topic['slug']} ({next_topic['title_en']})")
+    print(f"Next topic: {next_topic['slug']} ({next_topic['title_zh']})")
     print(f"Current cycle: {sm.state['cycle_number']}")
     print(f"Last published: {sm.state['last_published_date']}")

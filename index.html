@@ -1,14 +1,19 @@
 ---
 layout: default
-title: "Claude Code Daily"
-lang: en
+title: "Claude Code 每日博客"
 ---
 
 <div class="hero">
-  <h1>Claude Code Daily</h1>
-  <p>A daily blog exploring Claude Code features, one topic at a time.</p>
-  <div class="hero-links">
-    <a href="{{ site.baseurl }}/en/" class="btn">English</a>
-    <a href="{{ site.baseurl }}/zh/" class="btn">中文</a>
-  </div>
+  <h1>Claude Code 每日博客</h1>
+  <p>每天一篇，深入解读 Claude Code 的功能与用法</p>
+</div>
+
+<div class="post-list">
+{% for post in site.posts %}
+  <article class="post-card">
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <time>{{ post.date | date: "%Y年%m月%d日" }}</time>
+    <p>{{ post.description }}</p>
+  </article>
+{% endfor %}
 </div>

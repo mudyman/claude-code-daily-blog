@@ -30,7 +30,6 @@ jobs:
       CC_BLOG_MODEL: ${{ vars.CC_BLOG_MODEL || 'astron-code-latest' }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      TELEGRAM_PROXY_URL: ${{ secrets.TELEGRAM_PROXY_URL }}
 
     steps:
       - name: Checkout repository
@@ -87,7 +86,6 @@ jobs:
           git commit -m "Initial commit"
 
       - name: Generate blog post
-        id: generate
         run: |
           EXTRA_ARGS=""
           if [ "${{ github.event.inputs.skip_api }}" = "true" ]; then
@@ -126,7 +124,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Notify on failure
-        if: failure()
-        run: echo "::error::Blog generation/deployment failed."
