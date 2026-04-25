@@ -1,8 +1,8 @@
 {
   "last_topic_slug": "overview",
   "last_topic_index": 0,
-  "last_published_date": "2026-04-24",
-  "cycle_number": 3,
+  "last_published_date": "2026-04-25",
+  "cycle_number": 4,
   "history": [
     {
       "date": "2026-04-24",
@@ -21,6 +21,12 @@
       "topic": "overview",
       "index": 0,
       "cycle": 3
+    },
+    {
+      "date": "2026-04-25",
+      "topic": "overview",
+      "index": 0,
+      "cycle": 4
     }
   ]
 }
