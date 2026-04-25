@@ -23,6 +23,30 @@ PROJECT_ROOT = Path(__file__).parent.parent
 POSTS_DIR = PROJECT_ROOT / "_posts"
 
 
+def _extract_title(content: str) -> str:
+    """Extract the first H1 heading from markdown content."""
+    for line in content.split("\n"):
+        line = line.strip()
+        if line.startswith("# ") and not line.startswith("## "):
+            title = line[2:].strip()
+            title = re.sub(r'^[\U0001F300-\U0001F9FF]\s*', '', title)
+            return title
+    return ""
+
+
+def _fix_doc_links(content: str) -> str:
+    """Fix internal doc links by converting them to absolute CC docs URLs.
+
+    Links like /en/quickstart should point to code.claude.com docs.
+    """
+    content = re.sub(
+        r'\]\(/en/([\w-]+(?:/[\w-]+)*)\)',
+        r'](https://code.claude.com/docs/en/\1)',
+        content,
+    )
+    return content
+
+
 def write_post(content: str, date_str: str, topic: dict, lang: str) -> Path:
     """Write a Jekyll post file and return its path."""
     lang_dir = POSTS_DIR / lang
@@ -32,10 +56,14 @@ def write_post(content: str, date_str: str, topic: dict, lang: str) -> Path:
     filename = f"{date_str}-{slug}.md"
     filepath = lang_dir / filename
 
-    title = topic[f"title_{lang}"]
+    # Use the H1 title from generated content, fall back to topic title
+    extracted_title = _extract_title(content)
+    title = extracted_title or topic[f"title_{lang}"]
+
     other_lang = "zh" if lang == "en" else "en"
     other_slug = topic["slug"]
-    lang_switch = f"/claude-code-daily-blog/{other_lang}/{date_str.replace('-', '/')}/{other_slug.replace('/', '-')}.html"
+    # Jekyll permalink is /daily-digest/YYYY/MM/DD/slug.html (from categories)
+    lang_switch = f"/claude-code-daily-blog/daily-digest/{date_str.replace('-', '/')}/{other_slug.replace('/', '-')}.html"
 
     # Extract description from first paragraph, escape YAML special chars
     desc_match = re.search(r"^(?!#|\s*<!--|\s*!)(.+)$", content, re.MULTILINE)
@@ -136,6 +164,10 @@ def main():
     if screenshots:
         en_content = replace_screenshot_markers(en_content, screenshots)
         zh_content = replace_screenshot_markers(zh_content, screenshots)
+
+    # Fix internal doc links: add baseurl prefix to /en/xxx links
+    en_content = _fix_doc_links(en_content)
+    zh_content = _fix_doc_links(zh_content)
 
     # Step 6: Write post files
     date_str = datetime.now().strftime("%Y-%m-%d")
