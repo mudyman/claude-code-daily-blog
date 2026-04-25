@@ -8,9 +8,9 @@ layout: default
     <div class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
       {% if page.lang == "en" %}
-        <a href="{{ page.lang_switch }}" class="lang-switch">中文版</a>
+        <a href="{{ site.baseurl }}{{ page.lang_switch }}" class="lang-switch">中文版</a>
       {% else %}
-        <a href="{{ page.lang_switch }}" class="lang-switch">English</a>
+        <a href="{{ site.baseurl }}{{ page.lang_switch }}" class="lang-switch">English</a>
       {% endif %}
     </div>
     {% if page.tags %}
@@ -26,10 +26,10 @@ layout: default
 
   <nav class="post-nav">
     {% if page.previous %}
-    <a href="{{ page.previous.url }}" class="prev">&larr; {{ page.previous.title }}</a>
+    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev">&larr; {{ page.previous.title }}</a>
     {% endif %}
     {% if page.next %}
-    <a href="{{ page.next.url }}" class="next">{{ page.next.title }} &rarr;</a>
+    <a href="{{ site.baseurl }}{{ page.next.url }}" class="next">{{ page.next.title }} &rarr;</a>
     {% endif %}
   </nav>
 </article>

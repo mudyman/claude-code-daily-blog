@@ -35,7 +35,7 @@ def write_post(content: str, date_str: str, topic: dict, lang: str) -> Path:
     title = topic[f"title_{lang}"]
     other_lang = "zh" if lang == "en" else "en"
     other_slug = topic["slug"]
-    lang_switch = f"/{other_lang}/{date_str.replace('-', '/')}/{other_slug.replace('/', '-')}.html"
+    lang_switch = f"/claude-code-daily-blog/{other_lang}/{date_str.replace('-', '/')}/{other_slug.replace('/', '-')}.html"
 
     # Extract description from first paragraph, escape YAML special chars
     desc_match = re.search(r"^(?!#|\s*<!--|\s*!)(.+)$", content, re.MULTILINE)

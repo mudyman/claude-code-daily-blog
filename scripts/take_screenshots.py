@@ -176,7 +176,7 @@ def replace_screenshot_markers(content: str, screenshots: dict[str, str]) -> str
         if name in screenshots:
             path = screenshots[name]
             alt = name.replace("-", " ").replace("_", " ").title()
-            return f"\n\n![{alt}](/{path})\n\n"
+            return f"\n\n![{alt}]({path})\n\n"
         return m.group(0)
 
     return re.sub(
