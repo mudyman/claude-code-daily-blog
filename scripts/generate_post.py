@@ -22,12 +22,21 @@ POSTS_DIR = PROJECT_ROOT / "_posts"
 
 
 def _extract_title(content: str) -> str:
-    """Extract the first H1 heading from markdown content."""
+    """Extract the first H1 heading from markdown content.
+
+    Only extracts from lines that look like a real blog title
+    (not a raw doc heading like '## Get started').
+    """
     for line in content.split("\n"):
         line = line.strip()
         if line.startswith("# ") and not line.startswith("## "):
             title = line[2:].strip()
+            # Remove emoji prefix
             title = re.sub(r'^[\U0001F300-\U0001F9FF]\s*', '', title)
+            # Skip if title looks like a raw doc heading (too short/generic)
+            if len(title) < 5 or title.lower() in ("overview", "quickstart", "setup"):
+                return ""
+            return title
             return title
     return ""
 
