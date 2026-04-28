@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "setup",
-  "last_topic_index": 2,
-  "last_published_date": "2026-04-27",
+  "last_topic_slug": "features-overview",
+  "last_topic_index": 3,
+  "last_published_date": "2026-04-28",
   "cycle_number": 2,
   "history": [
     {
@@ -26,6 +26,12 @@
       "date": "2026-04-27",
       "topic": "setup",
       "index": 2,
+      "cycle": 2
+    },
+    {
+      "date": "2026-04-28",
+      "topic": "features-overview",
+      "index": 3,
       "cycle": 2
     }
   ]
