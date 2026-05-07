@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "context-window",
-  "last_topic_index": 11,
-  "last_published_date": "2026-05-06",
+  "last_topic_slug": "sub-agents",
+  "last_topic_index": 12,
+  "last_published_date": "2026-05-07",
   "cycle_number": 2,
   "history": [
     {
@@ -80,6 +80,12 @@
       "date": "2026-05-06",
       "topic": "context-window",
       "index": 11,
+      "cycle": 2
+    },
+    {
+      "date": "2026-05-07",
+      "topic": "sub-agents",
+      "index": 12,
       "cycle": 2
     }
   ]
