@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "jetbrains",
-  "last_topic_index": 15,
-  "last_published_date": "2026-05-10",
+  "last_topic_slug": "chrome",
+  "last_topic_index": 16,
+  "last_published_date": "2026-05-11",
   "cycle_number": 2,
   "history": [
     {
@@ -104,6 +104,12 @@
       "date": "2026-05-10",
       "topic": "jetbrains",
       "index": 15,
+      "cycle": 2
+    },
+    {
+      "date": "2026-05-11",
+      "topic": "chrome",
+      "index": 16,
       "cycle": 2
     }
   ]
