@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "chrome",
-  "last_topic_index": 16,
-  "last_published_date": "2026-05-11",
+  "last_topic_slug": "slack",
+  "last_topic_index": 17,
+  "last_published_date": "2026-05-12",
   "cycle_number": 2,
   "history": [
     {
@@ -110,6 +110,12 @@
       "date": "2026-05-11",
       "topic": "chrome",
       "index": 16,
+      "cycle": 2
+    },
+    {
+      "date": "2026-05-12",
+      "topic": "slack",
+      "index": 17,
       "cycle": 2
     }
   ]
