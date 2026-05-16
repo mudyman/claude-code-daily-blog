@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "third-party-integrations",
-  "last_topic_index": 20,
-  "last_published_date": "2026-05-15",
+  "last_topic_slug": "platforms",
+  "last_topic_index": 21,
+  "last_published_date": "2026-05-16",
   "cycle_number": 2,
   "history": [
     {
@@ -134,6 +134,12 @@
       "date": "2026-05-15",
       "topic": "third-party-integrations",
       "index": 20,
+      "cycle": 2
+    },
+    {
+      "date": "2026-05-16",
+      "topic": "platforms",
+      "index": 21,
       "cycle": 2
     }
   ]
