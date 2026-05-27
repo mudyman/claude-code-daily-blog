@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "best-practices",
-  "last_topic_index": 6,
-  "last_published_date": "2026-05-26",
+  "last_topic_slug": "how-claude-code-works",
+  "last_topic_index": 7,
+  "last_published_date": "2026-05-27",
   "cycle_number": 3,
   "history": [
     {
@@ -200,6 +200,12 @@
       "date": "2026-05-26",
       "topic": "best-practices",
       "index": 6,
+      "cycle": 3
+    },
+    {
+      "date": "2026-05-27",
+      "topic": "how-claude-code-works",
+      "index": 7,
       "cycle": 3
     }
   ]
