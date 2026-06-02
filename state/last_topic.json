@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "sub-agents",
-  "last_topic_index": 12,
-  "last_published_date": "2026-06-01",
+  "last_topic_slug": "agent-sdk/overview",
+  "last_topic_index": 13,
+  "last_published_date": "2026-06-02",
   "cycle_number": 3,
   "history": [
     {
@@ -236,6 +236,12 @@
       "date": "2026-06-01",
       "topic": "sub-agents",
       "index": 12,
+      "cycle": 3
+    },
+    {
+      "date": "2026-06-02",
+      "topic": "agent-sdk/overview",
+      "index": 13,
       "cycle": 3
     }
   ]
