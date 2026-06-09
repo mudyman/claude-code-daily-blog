@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "remote-control",
-  "last_topic_index": 19,
-  "last_published_date": "2026-06-08",
+  "last_topic_slug": "third-party-integrations",
+  "last_topic_index": 20,
+  "last_published_date": "2026-06-09",
   "cycle_number": 3,
   "history": [
     {
@@ -278,6 +278,12 @@
       "date": "2026-06-08",
       "topic": "remote-control",
       "index": 19,
+      "cycle": 3
+    },
+    {
+      "date": "2026-06-09",
+      "topic": "third-party-integrations",
+      "index": 20,
       "cycle": 3
     }
   ]
