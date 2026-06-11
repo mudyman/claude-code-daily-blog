@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "platforms",
-  "last_topic_index": 21,
-  "last_published_date": "2026-06-10",
+  "last_topic_slug": "claude-directory",
+  "last_topic_index": 22,
+  "last_published_date": "2026-06-11",
   "cycle_number": 3,
   "history": [
     {
@@ -290,6 +290,12 @@
       "date": "2026-06-10",
       "topic": "platforms",
       "index": 21,
+      "cycle": 3
+    },
+    {
+      "date": "2026-06-11",
+      "topic": "claude-directory",
+      "index": 22,
       "cycle": 3
     }
   ]
