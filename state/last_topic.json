@@ -1,8 +1,8 @@
 {
-  "last_topic_slug": "changelog",
-  "last_topic_index": 24,
-  "last_published_date": "2026-06-13",
-  "cycle_number": 3,
+  "last_topic_slug": "overview",
+  "last_topic_index": 0,
+  "last_published_date": "2026-06-14",
+  "cycle_number": 4,
   "history": [
     {
       "date": "2026-04-25",
@@ -309,6 +309,12 @@
       "topic": "changelog",
       "index": 24,
       "cycle": 3
+    },
+    {
+      "date": "2026-06-14",
+      "topic": "overview",
+      "index": 0,
+      "cycle": 4
     }
   ]
 }
