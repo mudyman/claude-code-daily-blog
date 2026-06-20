@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "common-workflows",
-  "last_topic_index": 5,
-  "last_published_date": "2026-06-19",
+  "last_topic_slug": "best-practices",
+  "last_topic_index": 6,
+  "last_published_date": "2026-06-20",
   "cycle_number": 4,
   "history": [
     {
@@ -344,6 +344,12 @@
       "date": "2026-06-19",
       "topic": "common-workflows",
       "index": 5,
+      "cycle": 4
+    },
+    {
+      "date": "2026-06-20",
+      "topic": "best-practices",
+      "index": 6,
       "cycle": 4
     }
   ]
