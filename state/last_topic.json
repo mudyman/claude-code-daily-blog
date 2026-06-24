@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "settings",
-  "last_topic_index": 9,
-  "last_published_date": "2026-06-23",
+  "last_topic_slug": "permission-modes",
+  "last_topic_index": 10,
+  "last_published_date": "2026-06-24",
   "cycle_number": 4,
   "history": [
     {
@@ -368,6 +368,12 @@
       "date": "2026-06-23",
       "topic": "settings",
       "index": 9,
+      "cycle": 4
+    },
+    {
+      "date": "2026-06-24",
+      "topic": "permission-modes",
+      "index": 10,
       "cycle": 4
     }
   ]
