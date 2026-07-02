@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "slack",
-  "last_topic_index": 17,
-  "last_published_date": "2026-07-01",
+  "last_topic_slug": "computer-use",
+  "last_topic_index": 18,
+  "last_published_date": "2026-07-02",
   "cycle_number": 4,
   "history": [
     {
@@ -416,6 +416,12 @@
       "date": "2026-07-01",
       "topic": "slack",
       "index": 17,
+      "cycle": 4
+    },
+    {
+      "date": "2026-07-02",
+      "topic": "computer-use",
+      "index": 18,
       "cycle": 4
     }
   ]
