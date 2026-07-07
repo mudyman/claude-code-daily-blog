@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "claude-directory",
-  "last_topic_index": 22,
-  "last_published_date": "2026-07-06",
+  "last_topic_slug": "legal-and-compliance",
+  "last_topic_index": 23,
+  "last_published_date": "2026-07-07",
   "cycle_number": 4,
   "history": [
     {
@@ -446,6 +446,12 @@
       "date": "2026-07-06",
       "topic": "claude-directory",
       "index": 22,
+      "cycle": 4
+    },
+    {
+      "date": "2026-07-07",
+      "topic": "legal-and-compliance",
+      "index": 23,
       "cycle": 4
     }
   ]
