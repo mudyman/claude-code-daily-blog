@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "overview",
-  "last_topic_index": 0,
-  "last_published_date": "2026-07-09",
+  "last_topic_slug": "quickstart",
+  "last_topic_index": 1,
+  "last_published_date": "2026-07-10",
   "cycle_number": 5,
   "history": [
     {
@@ -464,6 +464,12 @@
       "date": "2026-07-09",
       "topic": "overview",
       "index": 0,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-10",
+      "topic": "quickstart",
+      "index": 1,
       "cycle": 5
     }
   ]
