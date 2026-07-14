@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "cli-reference",
-  "last_topic_index": 4,
-  "last_published_date": "2026-07-13",
+  "last_topic_slug": "common-workflows",
+  "last_topic_index": 5,
+  "last_published_date": "2026-07-14",
   "cycle_number": 5,
   "history": [
     {
@@ -488,6 +488,12 @@
       "date": "2026-07-13",
       "topic": "cli-reference",
       "index": 4,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-14",
+      "topic": "common-workflows",
+      "index": 5,
       "cycle": 5
     }
   ]
