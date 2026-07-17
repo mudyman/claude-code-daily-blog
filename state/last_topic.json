@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "how-claude-code-works",
-  "last_topic_index": 7,
-  "last_published_date": "2026-07-16",
+  "last_topic_slug": "memory",
+  "last_topic_index": 8,
+  "last_published_date": "2026-07-17",
   "cycle_number": 5,
   "history": [
     {
@@ -506,6 +506,12 @@
       "date": "2026-07-16",
       "topic": "how-claude-code-works",
       "index": 7,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-17",
+      "topic": "memory",
+      "index": 8,
       "cycle": 5
     }
   ]
