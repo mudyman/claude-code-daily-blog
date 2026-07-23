@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "agent-sdk/overview",
-  "last_topic_index": 13,
-  "last_published_date": "2026-07-22",
+  "last_topic_slug": "vs-code",
+  "last_topic_index": 14,
+  "last_published_date": "2026-07-23",
   "cycle_number": 5,
   "history": [
     {
@@ -542,6 +542,12 @@
       "date": "2026-07-22",
       "topic": "agent-sdk/overview",
       "index": 13,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-23",
+      "topic": "vs-code",
+      "index": 14,
       "cycle": 5
     }
   ]
