@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "vs-code",
-  "last_topic_index": 14,
-  "last_published_date": "2026-07-23",
+  "last_topic_slug": "jetbrains",
+  "last_topic_index": 15,
+  "last_published_date": "2026-07-24",
   "cycle_number": 5,
   "history": [
     {
@@ -548,6 +548,12 @@
       "date": "2026-07-23",
       "topic": "vs-code",
       "index": 14,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-24",
+      "topic": "jetbrains",
+      "index": 15,
       "cycle": 5
     }
   ]
