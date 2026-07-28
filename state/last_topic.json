@@ -1,7 +1,7 @@
 {
-  "last_topic_slug": "computer-use",
-  "last_topic_index": 18,
-  "last_published_date": "2026-07-27",
+  "last_topic_slug": "remote-control",
+  "last_topic_index": 19,
+  "last_published_date": "2026-07-28",
   "cycle_number": 5,
   "history": [
     {
@@ -572,6 +572,12 @@
       "date": "2026-07-27",
       "topic": "computer-use",
       "index": 18,
+      "cycle": 5
+    },
+    {
+      "date": "2026-07-28",
+      "topic": "remote-control",
+      "index": 19,
       "cycle": 5
     }
   ]
