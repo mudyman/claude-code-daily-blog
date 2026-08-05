@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "quickstart",
-  "last_topic_index": 1,
-  "last_published_date": "2026-08-04",
+  "last_topic_slug": "setup",
+  "last_topic_index": 2,
+  "last_published_date": "2026-08-05",
   "cycle_number": 6,
   "history": [
-    {
-      "date": "2026-04-27",
-      "topic": "setup",
-      "index": 2,
-      "cycle": 2
-    },
     {
       "date": "2026-04-28",
       "topic": "features-overview",
@@ -602,6 +596,12 @@
       "date": "2026-08-04",
       "topic": "quickstart",
       "index": 1,
+      "cycle": 6
+    },
+    {
+      "date": "2026-08-05",
+      "topic": "setup",
+      "index": 2,
       "cycle": 6
     }
   ]
