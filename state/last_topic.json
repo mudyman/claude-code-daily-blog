@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "context-window",
-  "last_topic_index": 11,
-  "last_published_date": "2026-08-14",
+  "last_topic_slug": "sub-agents",
+  "last_topic_index": 12,
+  "last_published_date": "2026-08-15",
   "cycle_number": 6,
   "history": [
-    {
-      "date": "2026-05-07",
-      "topic": "sub-agents",
-      "index": 12,
-      "cycle": 2
-    },
     {
       "date": "2026-05-08",
       "topic": "agent-sdk/overview",
@@ -602,6 +596,12 @@
       "date": "2026-08-14",
       "topic": "context-window",
       "index": 11,
+      "cycle": 6
+    },
+    {
+      "date": "2026-08-15",
+      "topic": "sub-agents",
+      "index": 12,
       "cycle": 6
     }
   ]
