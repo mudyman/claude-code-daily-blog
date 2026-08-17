@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "agent-sdk/overview",
-  "last_topic_index": 13,
-  "last_published_date": "2026-08-16",
+  "last_topic_slug": "vs-code",
+  "last_topic_index": 14,
+  "last_published_date": "2026-08-17",
   "cycle_number": 6,
   "history": [
-    {
-      "date": "2026-05-09",
-      "topic": "vs-code",
-      "index": 14,
-      "cycle": 2
-    },
     {
       "date": "2026-05-10",
       "topic": "jetbrains",
@@ -602,6 +596,12 @@
       "date": "2026-08-16",
       "topic": "agent-sdk/overview",
       "index": 13,
+      "cycle": 6
+    },
+    {
+      "date": "2026-08-17",
+      "topic": "vs-code",
+      "index": 14,
       "cycle": 6
     }
   ]
