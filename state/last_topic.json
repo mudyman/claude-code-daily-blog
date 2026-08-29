@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "changelog",
-  "last_topic_index": 24,
-  "last_published_date": "2026-08-28",
-  "cycle_number": 6,
+  "last_topic_slug": "overview",
+  "last_topic_index": 0,
+  "last_published_date": "2026-08-29",
+  "cycle_number": 7,
   "history": [
-    {
-      "date": "2026-05-20",
-      "topic": "overview",
-      "index": 0,
-      "cycle": 3
-    },
     {
       "date": "2026-05-21",
       "topic": "quickstart",
@@ -603,6 +597,12 @@
       "topic": "changelog",
       "index": 24,
       "cycle": 6
+    },
+    {
+      "date": "2026-08-29",
+      "topic": "overview",
+      "index": 0,
+      "cycle": 7
     }
   ]
 }
