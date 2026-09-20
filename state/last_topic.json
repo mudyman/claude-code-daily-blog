@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "platforms",
-  "last_topic_index": 21,
-  "last_published_date": "2026-09-19",
+  "last_topic_slug": "claude-directory",
+  "last_topic_index": 22,
+  "last_published_date": "2026-09-20",
   "cycle_number": 7,
   "history": [
-    {
-      "date": "2026-06-11",
-      "topic": "claude-directory",
-      "index": 22,
-      "cycle": 3
-    },
     {
       "date": "2026-06-12",
       "topic": "legal-and-compliance",
@@ -602,6 +596,12 @@
       "date": "2026-09-19",
       "topic": "platforms",
       "index": 21,
+      "cycle": 7
+    },
+    {
+      "date": "2026-09-20",
+      "topic": "claude-directory",
+      "index": 22,
       "cycle": 7
     }
   ]
