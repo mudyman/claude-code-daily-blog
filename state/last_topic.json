@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "setup",
-  "last_topic_index": 2,
-  "last_published_date": "2026-09-25",
+  "last_topic_slug": "features-overview",
+  "last_topic_index": 3,
+  "last_published_date": "2026-09-26",
   "cycle_number": 8,
   "history": [
-    {
-      "date": "2026-06-17",
-      "topic": "features-overview",
-      "index": 3,
-      "cycle": 4
-    },
     {
       "date": "2026-06-18",
       "topic": "cli-reference",
@@ -602,6 +596,12 @@
       "date": "2026-09-25",
       "topic": "setup",
       "index": 2,
+      "cycle": 8
+    },
+    {
+      "date": "2026-09-26",
+      "topic": "features-overview",
+      "index": 3,
       "cycle": 8
     }
   ]
