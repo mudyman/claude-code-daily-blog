@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "best-practices",
-  "last_topic_index": 6,
-  "last_published_date": "2026-09-29",
+  "last_topic_slug": "how-claude-code-works",
+  "last_topic_index": 7,
+  "last_published_date": "2026-09-30",
   "cycle_number": 8,
   "history": [
-    {
-      "date": "2026-06-21",
-      "topic": "how-claude-code-works",
-      "index": 7,
-      "cycle": 4
-    },
     {
       "date": "2026-06-22",
       "topic": "memory",
@@ -602,6 +596,12 @@
       "date": "2026-09-29",
       "topic": "best-practices",
       "index": 6,
+      "cycle": 8
+    },
+    {
+      "date": "2026-09-30",
+      "topic": "how-claude-code-works",
+      "index": 7,
       "cycle": 8
     }
   ]
