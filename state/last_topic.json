@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "jetbrains",
-  "last_topic_index": 15,
-  "last_published_date": "2026-10-08",
+  "last_topic_slug": "chrome",
+  "last_topic_index": 16,
+  "last_published_date": "2026-10-09",
   "cycle_number": 8,
   "history": [
-    {
-      "date": "2026-06-30",
-      "topic": "chrome",
-      "index": 16,
-      "cycle": 4
-    },
     {
       "date": "2026-07-01",
       "topic": "slack",
@@ -602,6 +596,12 @@
       "date": "2026-10-08",
       "topic": "jetbrains",
       "index": 15,
+      "cycle": 8
+    },
+    {
+      "date": "2026-10-09",
+      "topic": "chrome",
+      "index": 16,
       "cycle": 8
     }
   ]
