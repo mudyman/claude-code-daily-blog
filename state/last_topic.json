@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "slack",
-  "last_topic_index": 17,
-  "last_published_date": "2026-10-10",
+  "last_topic_slug": "computer-use",
+  "last_topic_index": 18,
+  "last_published_date": "2026-10-11",
   "cycle_number": 8,
   "history": [
-    {
-      "date": "2026-07-02",
-      "topic": "computer-use",
-      "index": 18,
-      "cycle": 4
-    },
     {
       "date": "2026-07-03",
       "topic": "remote-control",
@@ -602,6 +596,12 @@
       "date": "2026-10-10",
       "topic": "slack",
       "index": 17,
+      "cycle": 8
+    },
+    {
+      "date": "2026-10-11",
+      "topic": "computer-use",
+      "index": 18,
       "cycle": 8
     }
   ]
