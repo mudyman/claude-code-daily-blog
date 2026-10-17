@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "legal-and-compliance",
-  "last_topic_index": 23,
-  "last_published_date": "2026-10-16",
+  "last_topic_slug": "changelog",
+  "last_topic_index": 24,
+  "last_published_date": "2026-10-17",
   "cycle_number": 8,
   "history": [
-    {
-      "date": "2026-07-08",
-      "topic": "changelog",
-      "index": 24,
-      "cycle": 4
-    },
     {
       "date": "2026-07-09",
       "topic": "overview",
@@ -602,6 +596,12 @@
       "date": "2026-10-16",
       "topic": "legal-and-compliance",
       "index": 23,
+      "cycle": 8
+    },
+    {
+      "date": "2026-10-17",
+      "topic": "changelog",
+      "index": 24,
       "cycle": 8
     }
   ]
