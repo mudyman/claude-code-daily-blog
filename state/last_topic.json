@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "cli-reference",
-  "last_topic_index": 4,
-  "last_published_date": "2026-10-22",
+  "last_topic_slug": "common-workflows",
+  "last_topic_index": 5,
+  "last_published_date": "2026-10-23",
   "cycle_number": 9,
   "history": [
-    {
-      "date": "2026-07-14",
-      "topic": "common-workflows",
-      "index": 5,
-      "cycle": 5
-    },
     {
       "date": "2026-07-15",
       "topic": "best-practices",
@@ -602,6 +596,12 @@
       "date": "2026-10-22",
       "topic": "cli-reference",
       "index": 4,
+      "cycle": 9
+    },
+    {
+      "date": "2026-10-23",
+      "topic": "common-workflows",
+      "index": 5,
       "cycle": 9
     }
   ]
