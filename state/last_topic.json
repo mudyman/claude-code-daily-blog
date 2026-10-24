@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "common-workflows",
-  "last_topic_index": 5,
-  "last_published_date": "2026-10-23",
+  "last_topic_slug": "best-practices",
+  "last_topic_index": 6,
+  "last_published_date": "2026-10-24",
   "cycle_number": 9,
   "history": [
-    {
-      "date": "2026-07-15",
-      "topic": "best-practices",
-      "index": 6,
-      "cycle": 5
-    },
     {
       "date": "2026-07-16",
       "topic": "how-claude-code-works",
@@ -602,6 +596,12 @@
       "date": "2026-10-23",
       "topic": "common-workflows",
       "index": 5,
+      "cycle": 9
+    },
+    {
+      "date": "2026-10-24",
+      "topic": "best-practices",
+      "index": 6,
       "cycle": 9
     }
   ]
