@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "memory",
-  "last_topic_index": 8,
-  "last_published_date": "2026-10-26",
+  "last_topic_slug": "settings",
+  "last_topic_index": 9,
+  "last_published_date": "2026-10-27",
   "cycle_number": 9,
   "history": [
-    {
-      "date": "2026-07-18",
-      "topic": "settings",
-      "index": 9,
-      "cycle": 5
-    },
     {
       "date": "2026-07-19",
       "topic": "permission-modes",
@@ -602,6 +596,12 @@
       "date": "2026-10-26",
       "topic": "memory",
       "index": 8,
+      "cycle": 9
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "settings",
+      "index": 9,
       "cycle": 9
     }
   ]
