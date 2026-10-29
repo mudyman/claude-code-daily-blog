@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "permission-modes",
-  "last_topic_index": 10,
-  "last_published_date": "2026-10-28",
+  "last_topic_slug": "context-window",
+  "last_topic_index": 11,
+  "last_published_date": "2026-10-29",
   "cycle_number": 9,
   "history": [
-    {
-      "date": "2026-07-20",
-      "topic": "context-window",
-      "index": 11,
-      "cycle": 5
-    },
     {
       "date": "2026-07-21",
       "topic": "sub-agents",
@@ -602,6 +596,12 @@
       "date": "2026-10-28",
       "topic": "permission-modes",
       "index": 10,
+      "cycle": 9
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "context-window",
+      "index": 11,
       "cycle": 9
     }
   ]
