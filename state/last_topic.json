@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "computer-use",
-  "last_topic_index": 18,
-  "last_published_date": "2026-11-05",
+  "last_topic_slug": "remote-control",
+  "last_topic_index": 19,
+  "last_published_date": "2026-11-06",
   "cycle_number": 9,
   "history": [
-    {
-      "date": "2026-07-28",
-      "topic": "remote-control",
-      "index": 19,
-      "cycle": 5
-    },
     {
       "date": "2026-07-29",
       "topic": "third-party-integrations",
@@ -602,6 +596,12 @@
       "date": "2026-11-05",
       "topic": "computer-use",
       "index": 18,
+      "cycle": 9
+    },
+    {
+      "date": "2026-11-06",
+      "topic": "remote-control",
+      "index": 19,
       "cycle": 9
     }
   ]
