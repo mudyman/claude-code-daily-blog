@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "features-overview",
-  "last_topic_index": 3,
-  "last_published_date": "2026-11-16",
+  "last_topic_slug": "cli-reference",
+  "last_topic_index": 4,
+  "last_published_date": "2026-11-17",
   "cycle_number": 10,
   "history": [
-    {
-      "date": "2026-08-07",
-      "topic": "cli-reference",
-      "index": 4,
-      "cycle": 6
-    },
     {
       "date": "2026-08-08",
       "topic": "common-workflows",
@@ -602,6 +596,12 @@
       "date": "2026-11-16",
       "topic": "features-overview",
       "index": 3,
+      "cycle": 10
+    },
+    {
+      "date": "2026-11-17",
+      "topic": "cli-reference",
+      "index": 4,
       "cycle": 10
     }
   ]
