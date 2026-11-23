@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "settings",
-  "last_topic_index": 9,
-  "last_published_date": "2026-11-22",
+  "last_topic_slug": "permission-modes",
+  "last_topic_index": 10,
+  "last_published_date": "2026-11-23",
   "cycle_number": 10,
   "history": [
-    {
-      "date": "2026-08-13",
-      "topic": "permission-modes",
-      "index": 10,
-      "cycle": 6
-    },
     {
       "date": "2026-08-14",
       "topic": "context-window",
@@ -602,6 +596,12 @@
       "date": "2026-11-22",
       "topic": "settings",
       "index": 9,
+      "cycle": 10
+    },
+    {
+      "date": "2026-11-23",
+      "topic": "permission-modes",
+      "index": 10,
       "cycle": 10
     }
   ]
