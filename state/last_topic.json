@@ -1,15 +1,9 @@
 {
-  "last_topic_slug": "sub-agents",
-  "last_topic_index": 12,
-  "last_published_date": "2026-11-25",
+  "last_topic_slug": "agent-sdk/overview",
+  "last_topic_index": 13,
+  "last_published_date": "2026-11-26",
   "cycle_number": 10,
   "history": [
-    {
-      "date": "2026-08-16",
-      "topic": "agent-sdk/overview",
-      "index": 13,
-      "cycle": 6
-    },
     {
       "date": "2026-08-17",
       "topic": "vs-code",
@@ -602,6 +596,12 @@
       "date": "2026-11-25",
       "topic": "sub-agents",
       "index": 12,
+      "cycle": 10
+    },
+    {
+      "date": "2026-11-26",
+      "topic": "agent-sdk/overview",
+      "index": 13,
       "cycle": 10
     }
   ]
